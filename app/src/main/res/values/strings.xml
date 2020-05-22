@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Amalgamate</string>
+    <string name="error_no_connection">No internet connection.</string>
+    <string name="error_generic">Unfortunately something went wrong.</string>
+    <string name="day">day</string>
+    <string name="week">week</string>
+    <string name="month">month</string>
+    <string name="year">year</string>
+    <string name="all_time">all time</string>
+</resources>

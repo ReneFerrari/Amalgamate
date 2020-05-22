@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/tvOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:background="@drawable/bg_tag"
+            android:fontFamily="serif-monospace"
+            android:paddingStart="4dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvVotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:alpha="0.42"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_up"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_below="@id/tvTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:alpha="0.42"
+            android:src="@drawable/ic_arrow_up" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Amalgamate</string>
+    <string name="error_no_connection">Keine Internetverbindung.</string>
+    <string name="error_generic">Leider ist etwas schiefgelaufen.</string>
+    <string name="day">Tag</string>
+    <string name="week">Woche</string>
+    <string name="month">Monat</string>
+    <string name="year">Jahr</string>
+    <string name="all_time">Alle Zeiten</string>
+</resources>

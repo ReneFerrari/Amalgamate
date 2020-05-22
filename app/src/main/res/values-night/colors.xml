@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorAndroidDev">#3ddc84</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorUnselected">#AAA</color>
+    <color name="colorAndroid">#3ddc84</color>
+    <color name="colorAndroidLight">#333ddc84</color>
+    <color name="colorIOS">#0a84ff</color>
+    <color name="colorIOSLight">#330a84ff</color>
+    <color name="colorKotlinLang">#bbff8800</color>
+    <color name="colorBottomNavSelected">@color/colorAccent</color>
+    <color name="colorSwift">#F05138</color>
+    <color name="colorText">#fff</color>
+    <color name="colorBottomNavUnselected">#42ffffff</color>
+    <color name="colorModeSwitch">#22ffffff</color>
+</resources>

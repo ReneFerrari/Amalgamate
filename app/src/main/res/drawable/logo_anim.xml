@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="8.466667"
+            android:viewportHeight="8.466667">
+            <path
+                android:name="path"
+                android:trimPathEnd="0"
+                android:fillColor="#00000000"
+                android:pathData="m6.6484,5.02775c0,0 -2.44735,-0.2064 -3.22899,-0.0924 -0.71959,0.0413 -1.26015,0.37343 -1.44671,0.75884 -0.26692,0.55181 -0.10285,1.27854 0.46906,1.24947 0.44459,-0.004 1.11364,-1.28382 1.45979,-2.75596 0.25292,-1.1457 0.23566,-1.73731 0.09597,-2.46458 -0.15508,-0.80739 2.66237,1.89928 0.99189,4.99117 -0.15463,0.74096 1.33912,-0.80492 1.60657,-0.44246"
+                android:strokeWidth="0.63499999"
+                android:strokeAlpha="1"
+                android:strokeColor="#3ddc84"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="miter" />
+        </vector>
+    </aapt:attr>
+    <target android:name="path">
+        <aapt:attr name="android:animation">
+            <set android:ordering="sequentially">
+                <objectAnimator
+                    android:startOffset="1200"
+                    android:duration="1200"
+                    android:interpolator="@android:anim/decelerate_interpolator"
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="0f"
+                    android:valueTo="1f"
+                    android:valueType="floatType" />
+                <objectAnimator
+                    android:duration="1000"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                    android:propertyName="trimPathStart"
+                    android:startOffset="1000"
+                    android:valueFrom="0f"
+                    android:valueTo="1f"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
