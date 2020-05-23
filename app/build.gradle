@@ -36,7 +36,7 @@ dependencies {
     def core_ktx_version = "1.2.0"
     def fragment_ktx_version = "1.2.4"
     def appcompat_version = "1.1.0"
-    def bowser_version = "1.2.0"
+    def browser_version = "1.2.0"
     def material_version = "1.2.0-alpha06"
     def rxjava_version = "3.0.2"
     def rxkotlin_version = "3.0.0"
@@ -55,7 +55,7 @@ dependencies {
     //google stuff
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation "androidx.browser:browser:$bowser_version"
+    implementation "androidx.browser:browser:$browser_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
