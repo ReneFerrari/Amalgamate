@@ -8,4 +8,5 @@
     <string name="month">Monat</string>
     <string name="year">Jahr</string>
     <string name="all_time">Alle Zeiten</string>
+    <string name="retry">Neu Laden</string>
 </resources>
