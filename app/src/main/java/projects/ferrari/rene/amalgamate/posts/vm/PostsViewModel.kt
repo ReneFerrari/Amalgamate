@@ -70,12 +70,10 @@ class PostsViewModel(private val groupType: GroupType) : ViewModel() {
     }
 
     private fun setUpFetchItems(timeFrame: TimeFrame?) {
-        mutableState.value =
-            State.INITIAL
+        mutableState.value = State.INITIAL
         mutableItems.value = emptyList()
         timeFrameForFetchedData = timeFrame ?: timeFrameForFetchedData
-        mutableState.value =
-            State.LOADING
+        mutableState.value = State.LOADING
     }
 
     fun refetchDataIfNecessary(timeFrame: TimeFrame? = null) {
