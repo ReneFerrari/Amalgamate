@@ -1,6 +1,6 @@
 package projects.ferrari.rene.amalgamate.splash
 
-import android.graphics.drawable.AnimatedVectorDrawable
+import android.graphics.drawable.Animatable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
@@ -15,7 +15,7 @@ import projects.ferrari.rene.amalgamate.R
 
 class SplashFragment : Fragment(R.layout.fragment_splash) {
     private var logoAnimationCallback: Animatable2Compat.AnimationCallback? = null
-    private var animatedLogo: AnimatedVectorDrawable? = null
+    private var drawableLogo: Drawable? = null
 
     private companion object {
         const val EXIT_ANIM_DURATION_MS = 300L
@@ -24,6 +24,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        drawableLogo = ivLogoAnimation.drawable
         setFullscreen()
         animateLogo()
     }
@@ -34,33 +35,28 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
     }
 
     private fun animateLogo() {
-        animatedLogo = ivLogoAnimation.drawable as AnimatedVectorDrawable
         registerLogoAnimationCallback()
-        animatedLogo?.start()
+        (drawableLogo as? Animatable)?.start()
     }
 
     private fun registerLogoAnimationCallback() {
-        animatedLogo?.let { animated ->
-            logoAnimationCallback = getLogoAnimationCallback(animated)
-            AnimatedVectorDrawableCompat.registerAnimationCallback(
-                animated,
-                logoAnimationCallback
-            )
-        }
+        logoAnimationCallback = getLogoAnimationCallback()
+        AnimatedVectorDrawableCompat.registerAnimationCallback(
+            drawableLogo,
+            logoAnimationCallback
+        )
     }
 
     private fun unregisterLogoAnimationCallback() {
         logoAnimationCallback?.let { callback ->
-            AnimatedVectorDrawableCompat.unregisterAnimationCallback(animatedLogo, callback)
+            AnimatedVectorDrawableCompat.unregisterAnimationCallback(drawableLogo, callback)
         }
     }
 
-    private fun getLogoAnimationCallback(
-        animated: AnimatedVectorDrawable
-    ) = object : Animatable2Compat.AnimationCallback() {
+    private fun getLogoAnimationCallback() = object : Animatable2Compat.AnimationCallback() {
         override fun onAnimationEnd(drawable: Drawable?) {
             super.onAnimationEnd(drawable)
-            AnimatedVectorDrawableCompat.unregisterAnimationCallback(animated, this)
+            AnimatedVectorDrawableCompat.unregisterAnimationCallback(drawable, this)
             removeFragment()
         }
     }
