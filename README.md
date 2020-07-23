@@ -19,7 +19,7 @@ The following dependencies are used:
 - OkHttp
 - Moshi
 
-When the initial App start happens, a Splashscreen animating the Amalgamate logo is shown. The animation is made with an AnimatedVectorDrawable using trimPath. The core App Architecture is MVVM with RxJava used in the ViewModel and LiveData to observe the ViewModel. MaterialComponents provided by Google are used for the App UI.
+When the initial App start happens, a Splashscreen animating the Amalgamate logo is shown. The animation is made with an AnimatedVectorDrawable using trimPath. The core App Architecture is MVVM with RxJava used in the ViewModel and LiveData to observe the ViewModel. MaterialComponents provided by Google are used for the App UI. Since this App is very tiny, it could have been built wit ha much simpler Architecture - however I might extend the featureset of the future and without a proper Architecture, this would be an unnecessarily difficult task.
 
 ### Showcase Video
 ![](https://imgur.com/hwcxQ2P.gif)
